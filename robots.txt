@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cockpitgest-site.no-sages-editor.com/sitemap.xml
