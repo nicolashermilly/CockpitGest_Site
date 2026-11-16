@@ -45,4 +45,4 @@ _bloc-difference-accueil.html   snippet du tableau comparatif (si on garde l'anc
 - "Pour qui" : 5 pages (retenu) vs 1 page à sections.
 - Migration éventuelle vers editeur.css (charte éditeur) si standardisation — ici on a privilégié la continuité avec l'accueil live.
 
-Fichiers générés : 48.
+Fichiers générés : 47.

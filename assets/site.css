@@ -164,11 +164,20 @@ footer{border-top:1px solid var(--line);padding:30px 0;font-size:.88rem;color:va
 .stagger.vis>*:nth-child(6){transition-delay:.35s}.stagger.vis>*:nth-child(7){transition-delay:.42s}
 .stagger.vis>*:nth-child(8){transition-delay:.49s}.stagger.vis>*:nth-child(9){transition-delay:.56s}
 
-/* Environnement hero : aurora (3 blobs flottants) + grille masquée qui défile */
+/* Environnement hero : aurora (3 blobs) + grille masquée — injectés en JS pour la parallaxe (data-par) */
 .hero{position:relative;overflow:hidden}
-.hero::before{content:"";position:absolute;inset:-30%;z-index:0;pointer-events:none;filter:blur(48px);opacity:.7;background:radial-gradient(34% 36% at 16% 26%,rgba(124,58,237,.5),transparent 60%),radial-gradient(30% 34% at 84% 16%,rgba(168,85,247,.45),transparent 60%),radial-gradient(40% 44% at 62% 86%,rgba(192,38,211,.4),transparent 62%);animation:floatA 15s ease-in-out infinite alternate}
-.hero::after{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;opacity:.12;background-image:linear-gradient(rgba(150,130,200,.4) 1px,transparent 1px),linear-gradient(90deg,rgba(150,130,200,.4) 1px,transparent 1px);background-size:48px 48px;-webkit-mask-image:radial-gradient(70% 60% at 50% 30%,#000,transparent 80%);mask-image:radial-gradient(70% 60% at 50% 30%,#000,transparent 80%);animation:drift 20s linear infinite}
 .hero>.wrap{position:relative;z-index:1}
+.fx{position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none}
+.aurora{position:absolute;inset:-30%;filter:blur(48px);opacity:.7;will-change:transform;background:radial-gradient(34% 36% at 16% 26%,rgba(124,58,237,.5),transparent 60%),radial-gradient(30% 34% at 84% 16%,rgba(168,85,247,.45),transparent 60%),radial-gradient(40% 44% at 62% 86%,rgba(192,38,211,.4),transparent 62%);animation:floatA 15s ease-in-out infinite alternate}
+.gridfx{position:absolute;inset:0;opacity:.12;will-change:transform;background-image:linear-gradient(rgba(150,130,200,.4) 1px,transparent 1px),linear-gradient(90deg,rgba(150,130,200,.4) 1px,transparent 1px);background-size:48px 48px;-webkit-mask-image:radial-gradient(70% 60% at 50% 30%,#000,transparent 80%);mask-image:radial-gradient(70% 60% at 50% 30%,#000,transparent 80%);animation:drift 20s linear infinite}
+
+/* Mot qui tourne (.rot) */
+.rot{display:inline-grid;vertical-align:bottom}
+.rot>span{grid-area:1/1;opacity:0;transform:translateY(45%) rotateX(-90deg);transform-origin:bottom center;transition:opacity .5s ease,transform .5s cubic-bezier(.2,.7,.2,1);background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.rot>span.on{opacity:1;transform:none}
+
+/* Maquette 3D (inclinaison suivant le curseur) */
+.dash{transform-style:preserve-3d}
 
 /* Tuiles vivantes : bordure conique animée + spotlight souris + lift (porté de .live) */
 .fn,.feat .card{position:relative;overflow:hidden;isolation:isolate;transition:transform .25s,box-shadow .3s,border-color .25s}
