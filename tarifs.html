@@ -1,0 +1,276 @@
+<!DOCTYPE html><html lang="fr"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tarifs — Cockpit'Gest · No Sage's Editor</title>
+<meta name="description" content="Trois offres simples pour Cockpit'Gest : Indépendant, Agence, TPE-PME. Toutes les fonctionnalités incluses, multi-entreprise. Prix mensuel sans engagement ou annuel.">
+<meta name="theme-color" content="#1A1226">
+<meta property="og:title" content="Tarifs — Cockpit'Gest"><meta property="og:description" content="Trois offres simples : Indépendant 29€, Agence 79€, TPE-PME 149€ /mois HT. Toutes les fonctionnalités incluses. Sans engagement.">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Cockpit'Gest">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>/* Cockpit'Gest — charte site produit (aubergine / violet). Tokens repris de l'accueil. */
+:root{
+  --base:#1A1226; --surface:#211A2E; --surface-2:#2A2138; --line:#3A2E4D;
+  --accent:#A855F7; --accent-light:#D8B4FE; --accent-deep:#7C3AED;
+  --text:#EDE7F5; --text-muted:#A99FB8; --text-dim:#7C7188;
+  --ok:#34D399; --soon:#FBBF24;
+  --grad:linear-gradient(100deg,#7C3AED,#A855F7);
+  --display:'Space Grotesk',system-ui,sans-serif;
+  --body:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,monospace;
+  --maxw:1080px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--base);color:var(--text);font-family:var(--body);line-height:1.65;-webkit-font-smoothing:antialiased}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+a{color:inherit;text-decoration:none}
+.nav{position:sticky;top:0;z-index:50;background:rgba(26,18,38,.82);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:62px}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:600;font-size:1.05rem}
+.brand svg{width:30px;height:30px}.brand .accent{color:var(--accent-light)}
+.nav-links{display:flex;align-items:center;gap:26px;font-size:.92rem}
+.nav-links a{color:var(--text-muted);transition:color .15s}
+.nav-links a:hover,.nav-links a.active{color:var(--text)}
+.nav-cta{padding:8px 16px;border-radius:9px;background:var(--grad);color:#fff!important;font-weight:500}
+@media(max-width:860px){.nav-links a:not(.nav-cta):not(.active){display:none}}
+.btn{display:inline-flex;align-items:center;gap:9px;padding:13px 22px;border-radius:11px;font-weight:500;font-size:.98rem;transition:transform .12s,background .15s}
+.btn-primary{background:var(--grad);color:#fff;background-size:170% 100%;transition:transform .12s,background-position .45s ease,box-shadow .2s}
+.btn-primary:hover{transform:translateY(-1px);background-position:100% 0;box-shadow:0 12px 30px -12px rgba(168,85,247,.7)}
+.btn-ghost{border:1px solid var(--line);color:var(--text)}
+.btn-ghost:hover{background:var(--surface-2)}
+.cta-row{display:flex;flex-wrap:wrap;gap:14px}
+.hero{position:relative;overflow:hidden;padding:56px 0 30px;background:radial-gradient(54em 30em at 16% -10%,rgba(168,85,247,.20),transparent 70%),radial-gradient(48em 28em at 96% 0,rgba(124,58,237,.16),transparent 70%);border-bottom:1px solid var(--line)}
+.hero>.wrap{position:relative;z-index:1}
+.beta{display:inline-flex;align-items:center;gap:9px;font-family:var(--mono);font-size:12px;color:var(--accent-light);background:rgba(168,85,247,.12);border:1px solid rgba(168,85,247,.42);border-radius:99px;padding:7px 15px;margin-bottom:18px}
+.beta .pt{width:7px;height:7px;border-radius:50%;background:var(--grad);box-shadow:0 0 10px rgba(168,85,247,.8)}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:1.6px;text-transform:uppercase;color:var(--accent-light);margin-bottom:14px}
+h1{font-family:var(--display);font-weight:700;font-size:clamp(2rem,5vw,3rem);line-height:1.07;letter-spacing:-.02em;max-width:18ch;margin-bottom:16px}
+h1 .accent{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lede{color:var(--text-muted);font-size:1.1rem;max-width:62ch;margin-bottom:8px}
+section.block{padding:40px 0 56px}
+/* Toggle mensuel/annuel */
+.toggle{display:inline-flex;align-items:center;gap:0;background:var(--surface);border:1px solid var(--line);border-radius:99px;padding:5px;margin:26px 0 6px}
+.toggle button{font-family:var(--body);font-size:.9rem;font-weight:500;color:var(--text-muted);background:none;border:0;padding:9px 18px;border-radius:99px;cursor:pointer;transition:all .18s}
+.toggle button.on{background:var(--grad);color:#fff}
+.save{font-family:var(--mono);font-size:11px;color:var(--ok);margin-left:12px}
+/* Pricing grid */
+.prices{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:22px}
+@media(max-width:860px){.prices{grid-template-columns:1fr}}
+.price{position:relative;display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:26px 24px;transition:border-color .2s,transform .15s}
+.price:hover{border-color:var(--accent);transform:translateY(-3px)}
+.price.feat{border-color:var(--accent);box-shadow:0 30px 70px -40px rgba(168,85,247,.6)}
+.price .tag{position:absolute;top:-11px;left:24px;font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:4px 11px;border-radius:99px;background:var(--grad);color:#fff}
+.price .pname{font-family:var(--display);font-weight:600;font-size:1.3rem;margin-bottom:4px}
+.price .ptarget{font-size:.9rem;color:var(--text-muted);margin-bottom:18px;min-height:2.6em}
+.price .amount{font-family:var(--display);font-weight:700;font-size:2.5rem;line-height:1;letter-spacing:-.02em}
+.price .amount .cur{font-size:1.1rem;font-weight:600;color:var(--text-muted);vertical-align:top}
+.price .per{font-size:.88rem;color:var(--text-dim);margin:6px 0 2px}
+.price .peryear{font-family:var(--mono);font-size:11.5px;color:var(--accent-light);min-height:1.2em;margin-bottom:18px}
+.price .cta{margin-bottom:20px}
+.price .cta .btn{width:100%;justify-content:center}
+.price .quotas{display:grid;gap:9px;margin-bottom:16px;padding-bottom:16px;border-bottom:1px solid var(--line)}
+.price .quotas .q{display:flex;align-items:baseline;justify-content:space-between;font-size:.92rem}
+.price .quotas .q .ql{color:var(--text-muted)}
+.price .quotas .q .qv{font-family:var(--display);font-weight:600;color:var(--text);font-variant-numeric:tabular-nums}
+.price ul.inc{list-style:none;padding:0;margin:0}
+.price ul.inc li{position:relative;padding-left:22px;font-size:.9rem;color:var(--text-muted);margin:7px 0}
+.price ul.inc li::before{content:"\2713";position:absolute;left:0;color:var(--ok);font-weight:700}
+.allin{margin-top:26px;background:var(--surface);border:1px dashed var(--line);border-radius:14px;padding:18px 20px}
+.allin h3{font-family:var(--display);font-weight:600;font-size:1.05rem;margin-bottom:10px}
+.allin .chips{display:flex;flex-wrap:wrap;gap:8px}
+.allin .chip{font-size:.84rem;padding:6px 12px;border-radius:99px;background:var(--surface-2);border:1px solid var(--line);color:var(--text-muted)}
+.note{background:var(--surface-2);border:1px solid var(--line);border-left:3px solid var(--soon);border-radius:10px;padding:14px 16px;margin:24px 0;font-size:.92rem;color:var(--text-muted)}
+.note b{color:var(--text)}
+/* Quota table */
+.sec-head{max-width:66ch;margin:44px 0 18px}
+h2{font-family:var(--display);font-weight:600;font-size:1.6rem;letter-spacing:-.01em;margin-bottom:10px}
+.sec-head p{color:var(--text-muted)}
+.scroll-x{overflow-x:auto}
+.ctable{width:100%;border-collapse:collapse;font-size:.93rem;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.ctable th,.ctable td{padding:13px 14px;border-bottom:1px solid var(--line);text-align:left}
+.ctable thead th{background:var(--surface-2);font-family:var(--mono);font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--text-muted);font-weight:500;text-align:center}
+.ctable thead th:first-child{text-align:left}
+.ctable tbody tr:last-child td{border-bottom:none}
+.ctable td:first-child{color:var(--text-muted)}
+.ctable td.c{text-align:center;font-weight:600;font-variant-numeric:tabular-nums}
+/* FAQ */
+details.qa{background:var(--surface);border:1px solid var(--line);border-radius:12px;margin-bottom:10px;overflow:hidden}
+details.qa>summary{list-style:none;cursor:pointer;padding:16px 46px 16px 18px;position:relative;font-family:var(--display);font-weight:500;font-size:1rem}
+details.qa>summary::-webkit-details-marker{display:none}
+details.qa>summary::after{content:"+";position:absolute;right:18px;top:14px;font-size:1.3rem;color:var(--accent-light);transition:transform .2s}
+details.qa[open]>summary::after{transform:rotate(45deg)}
+details.qa .a{padding:0 18px 18px;color:var(--text-muted);font-size:.95rem}
+details.qa .a b{color:var(--text)}
+.cta-final{text-align:center;margin-top:48px}
+.final-box{position:relative;overflow:hidden;border-radius:24px;padding:48px 32px;text-align:center;color:#fff;background:linear-gradient(120deg,#7C3AED,#A855F7,#C026D3,#7C3AED);background-size:300% 300%;animation:grad 13s ease infinite}
+@keyframes grad{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+.final-box>*{position:relative;z-index:1}
+.final-box h2{color:#fff;margin-bottom:12px}
+.final-box p{color:rgba(255,255,255,.92);max-width:54ch;margin:0 auto 22px}
+.final-box .btn-primary{background:#fff;color:var(--accent-deep)}
+.final-box .btn-ghost{border-color:rgba(255,255,255,.6);color:#fff}
+footer{border-top:1px solid var(--line);padding:30px 0;font-size:.88rem;color:var(--text-dim);margin-top:48px}
+.foot-inner{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
+.foot-links{display:flex;flex-wrap:wrap;gap:18px}
+.foot-links a{color:var(--text-muted)}.foot-links a:hover{color:var(--accent-light)}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style></head><body>
+<header class="nav"><div class="wrap nav-inner">
+  <a class="brand" href="/" aria-label="Cockpit'Gest — accueil"><svg viewBox="0 0 40 40" role="img" aria-hidden="true"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7C3AED"/><stop offset="1" stop-color="#A855F7"/></linearGradient></defs><rect x="1.5" y="1.5" width="37" height="37" rx="11" fill="none" stroke="url(#g)" stroke-width="2"/><text x="20" y="20" font-family="'JetBrains Mono',monospace" font-size="22" font-weight="500" fill="url(#g)" text-anchor="middle" dominant-baseline="central">@</text></svg><span>Cockpit'<span class="accent">Gest</span></span></a>
+  <nav class="nav-links" aria-label="Navigation principale">
+    <a href="/fonctionnalites/">Fonctionnalités</a>
+    <a href="/pour-qui/">Pour qui</a>
+    <a href="/tarifs.html" class="active">Tarifs</a>
+    <a href="/faq.html">FAQ</a>
+    <a class="nav-cta" href="mailto:contact@no-sages-editor.com?subject=Demande%20de%20d%C3%A9mo%20Cockpit%27Gest">Demander une démo</a>
+  </nav></div></header>
+<main>
+
+<section class="hero"><div class="wrap">
+  <span class="beta"><span class="pt"></span> Bêta · ouverture courant novembre 2026</span>
+  <p class="eyebrow">Tarifs</p>
+  <h1>Trois offres simples, <span class="accent">tout inclus</span>.</h1>
+  <p class="lede">Pas de modules à la carte ni de fonctionnalité verrouillée derrière un palier supérieur : chaque offre donne accès à tout le cockpit. Ce qui change, c'est la <b>taille</b> — utilisateurs, contacts, volume d'e-mails — selon que vous êtes seul, une agence ou une équipe.</p>
+
+  <div class="toggle" role="group" aria-label="Choix de la périodicité">
+    <button id="tg-m" class="on" aria-pressed="true">Mensuel</button>
+    <button id="tg-y" aria-pressed="false">Annuel</button>
+  </div><span class="save" id="save">2 mois offerts en annuel</span>
+</div></section>
+
+<section class="block"><div class="wrap">
+  <div class="prices">
+    <!-- Indépendant -->
+    <div class="price">
+      <div class="pname">Indépendant</div>
+      <div class="ptarget">Pour travailler seul : freelance, consultant, indépendant de la com'.</div>
+      <div class="amount"><span class="cur">€</span><span class="val" data-m="29" data-y="24">29</span></div>
+      <div class="per"><span class="per-lbl">HT / mois</span></div>
+      <div class="peryear" data-y="ou 290 € HT / an">&nbsp;</div>
+      <div class="cta"><a class="btn btn-primary" href="mailto:contact@no-sages-editor.com?subject=D%C3%A9mo%20Cockpit%27Gest%20-%20offre%20Ind%C3%A9pendant">Demander une démo</a></div>
+      <div class="quotas">
+        <div class="q"><span class="ql">Utilisateurs</span><span class="qv">1</span></div>
+        <div class="q"><span class="ql">Contacts actifs</span><span class="qv">1 000</span></div>
+        <div class="q"><span class="ql">E-mails / mois</span><span class="qv">2 000</span></div>
+      </div>
+      <ul class="inc">
+        <li>Tout le cockpit inclus</li>
+        <li>Multi-entreprise (1 espace)</li>
+        <li>Socle de gestion NF525</li>
+      </ul>
+    </div>
+    <!-- Agence -->
+    <div class="price feat">
+      <div class="tag">Le plus choisi</div>
+      <div class="pname">Agence</div>
+      <div class="ptarget">Pour gérer plusieurs clients ou marques depuis un même cockpit.</div>
+      <div class="amount"><span class="cur">€</span><span class="val" data-m="79" data-y="66">79</span></div>
+      <div class="per"><span class="per-lbl">HT / mois</span></div>
+      <div class="peryear" data-y="ou 790 € HT / an">&nbsp;</div>
+      <div class="cta"><a class="btn btn-primary" href="mailto:contact@no-sages-editor.com?subject=D%C3%A9mo%20Cockpit%27Gest%20-%20offre%20Agence">Demander une démo</a></div>
+      <div class="quotas">
+        <div class="q"><span class="ql">Utilisateurs</span><span class="qv">5</span></div>
+        <div class="q"><span class="ql">Contacts actifs</span><span class="qv">10 000</span></div>
+        <div class="q"><span class="ql">E-mails / mois</span><span class="qv">20 000</span></div>
+      </div>
+      <ul class="inc">
+        <li>Tout le cockpit inclus</li>
+        <li>Multi-entreprise (espaces isolés)</li>
+        <li>Socle de gestion NF525</li>
+      </ul>
+    </div>
+    <!-- TPE-PME -->
+    <div class="price">
+      <div class="pname">TPE-PME</div>
+      <div class="ptarget">Pour une équipe interne qui pilote son acquisition et sa gestion.</div>
+      <div class="amount"><span class="cur">€</span><span class="val" data-m="149" data-y="124">149</span></div>
+      <div class="per"><span class="per-lbl">HT / mois</span></div>
+      <div class="peryear" data-y="ou 1 490 € HT / an">&nbsp;</div>
+      <div class="cta"><a class="btn btn-primary" href="mailto:contact@no-sages-editor.com?subject=D%C3%A9mo%20Cockpit%27Gest%20-%20offre%20TPE-PME">Demander une démo</a></div>
+      <div class="quotas">
+        <div class="q"><span class="ql">Utilisateurs</span><span class="qv">15</span></div>
+        <div class="q"><span class="ql">Contacts actifs</span><span class="qv">25 000</span></div>
+        <div class="q"><span class="ql">E-mails / mois</span><span class="qv">50 000</span></div>
+      </div>
+      <ul class="inc">
+        <li>Tout le cockpit inclus</li>
+        <li>Multi-entreprise (espaces isolés)</li>
+        <li>Socle de gestion NF525</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="note"><b>Pendant la bêta :</b> l'inscription en ligne n'est pas encore ouverte. On configure Cockpit'Gest sur votre activité réelle, puis on en parle — <b>sans engagement</b>. L'<b>essai 14 jours sans carte</b> arrivera à l'ouverture des inscriptions. Prix indiqués <b>HT</b> ; facturation mensuelle sans engagement ou annuelle (2 mois offerts), par facture.</div>
+
+  <div class="allin">
+    <h3>Inclus dans toutes les offres</h3>
+    <div class="chips">
+      <span class="chip">Cockpit &amp; KPI</span><span class="chip">Pipeline &amp; leads</span><span class="chip">Capture de leads</span>
+      <span class="chip">Attribution / ROI par canal</span><span class="chip">Contenus &amp; SEO + validation</span><span class="chip">Diffusion multicanal</span>
+      <span class="chip">Elliot — copilote IA</span><span class="chip">Onboarding guidé</span><span class="chip">Import de reprise</span>
+      <span class="chip">Portail client</span><span class="chip">Relances / actions dues</span><span class="chip">Auto-consentement RGPD</span>
+      <span class="chip">Socle de gestion NF525</span><span class="chip">Multi-entreprise isolé</span>
+    </div>
+  </div>
+</div></section>
+
+<section class="block"><div class="wrap">
+  <div class="sec-head"><h2>La différence tient à la taille, pas aux fonctions.</h2><p>Les trois offres ouvrent le même produit. Vous choisissez selon votre volume — et vous changez d'offre quand votre activité grandit.</p></div>
+  <div class="scroll-x"><table class="ctable">
+    <thead><tr><th>Selon votre volume</th><th>Indépendant</th><th>Agence</th><th>TPE-PME</th></tr></thead>
+    <tbody>
+      <tr><td>Utilisateurs (sièges)</td><td class="c">1</td><td class="c">5</td><td class="c">15</td></tr>
+      <tr><td>Contacts actifs</td><td class="c">1 000</td><td class="c">10 000</td><td class="c">25 000</td></tr>
+      <tr><td>E-mails / mois</td><td class="c">2 000</td><td class="c">20 000</td><td class="c">50 000</td></tr>
+      <tr><td>Prix HT / mois</td><td class="c">29 €</td><td class="c">79 €</td><td class="c">149 €</td></tr>
+      <tr><td>Prix HT / an (2 mois offerts)</td><td class="c">290 €</td><td class="c">790 €</td><td class="c">1 490 €</td></tr>
+    </tbody>
+  </table></div>
+</div></section>
+
+<section class="block"><div class="wrap">
+  <div class="sec-head"><h2>Questions sur les tarifs</h2></div>
+  <details class="qa"><summary>Qu'est-ce qu'un « contact actif » ?</summary><div class="a">Un contact (tiers ou lead) présent dans votre espace et pris en compte dans vos actions. Les contacts archivés ne comptent pas. Si vous approchez de votre plafond, on vous prévient avant — rien n'est supprimé.</div></details>
+  <details class="qa"><summary>Puis-je changer d'offre plus tard ?</summary><div class="a">Oui. Vous passez d'une offre à l'autre quand votre volume évolue ; l'ajustement se fait sur la facturation suivante.</div></details>
+  <details class="qa"><summary>Y a-t-il un engagement ?</summary><div class="a"><b>Non.</b> L'offre mensuelle est sans engagement. L'offre annuelle (2 mois offerts) se règle pour l'année.</div></details>
+  <details class="qa"><summary>Comment se passe le paiement ?</summary><div class="a">Pendant la bêta, la facturation se fait <b>par facture</b>. Le paiement en ligne par abonnement arrivera avec l'ouverture des inscriptions self-service.</div></details>
+  <details class="qa"><summary>Y a-t-il un essai gratuit ?</summary><div class="a">Un <b>essai 14 jours sans carte</b> est prévu à l'ouverture des inscriptions. D'ici là, on configure le produit sur votre activité et on vous fait une démo — sans engagement.</div></details>
+</div></section>
+
+<section class="cta-final"><div class="wrap">
+  <div class="final-box">
+    <h2>Une offre vous correspond ?</h2>
+    <p>On configure Cockpit'Gest sur votre activité réelle, puis on en parle. Sans engagement.</p>
+    <div class="cta-row" style="justify-content:center"><a class="btn btn-primary" href="mailto:contact@no-sages-editor.com?subject=Demande%20de%20d%C3%A9mo%20Cockpit%27Gest">Demander une démo</a><a class="btn btn-ghost" href="/fonctionnalites/">Voir les fonctionnalités</a></div>
+  </div>
+</div></section>
+</main>
+<footer><div class="wrap foot-inner">
+  <span>© 2026 No Sage's Editor · Cockpit'Gest</span>
+  <div class="foot-links">
+    <a href="/fonctionnalites/">Fonctionnalités</a>
+    <a href="/pour-qui/">Pour qui</a>
+    <a href="/tarifs.html">Tarifs</a>
+    <a href="/faq.html">FAQ</a>
+    <a href="https://no-sages-editor.com/">No Sage's Editor</a>
+    <a href="mailto:contact@no-sages-editor.com">Contact</a>
+  </div></div></footer>
+<script>
+(function(){
+  var m=document.getElementById('tg-m'),y=document.getElementById('tg-y'),save=document.getElementById('save');
+  function set(annual){
+    m.classList.toggle('on',!annual);y.classList.toggle('on',annual);
+    m.setAttribute('aria-pressed',String(!annual));y.setAttribute('aria-pressed',String(annual));
+    save.style.visibility=annual?'hidden':'visible';
+    document.querySelectorAll('.price').forEach(function(card){
+      var v=card.querySelector('.val'),lbl=card.querySelector('.per-lbl'),yr=card.querySelector('.peryear');
+      if(annual){v.textContent=v.getAttribute('data-y');lbl.textContent='HT / mois, en annuel';yr.textContent=yr.getAttribute('data-y');}
+      else{v.textContent=v.getAttribute('data-m');lbl.textContent='HT / mois';yr.innerHTML='&nbsp;';}
+    });
+  }
+  m.addEventListener('click',function(){set(false);});
+  y.addEventListener('click',function(){set(true);});
+  set(false);
+})();
+</script>
+</body></html>
